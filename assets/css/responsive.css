@@ -1,0 +1,1394 @@
+@media (min-width: 1024px) {
+    /* ==========Button============= */
+    .button:hover {
+        background: transparent;
+        box-shadow: 0 0.1rem 0.4rem 0 rgb(0 0 0 / 50%);
+        -webkit-transform: translateY(0.1rem);
+        transform: translateY(0.1rem);
+    }
+    
+    
+    .button:hover:after {
+        opacity: 0;
+    }
+
+    /* =========language switcher==============*/
+    .language-switcher:hover{
+        background-color: #29283d;
+    }
+
+    .language-switcher:hover .language-switcher__dropdown{
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    
+    }
+
+    .language-switcher:hover .language-switcher__dropdown > li{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .language-switcher__dropdown > li{
+        opacity: 0;
+        -webkit-transform: translateY(-1rem);
+        transform: translateY(-1rem);
+        transition: opacity .3s ease .1s,-webkit-transform .3s ease .2s;
+        transition: transform .3s ease .2s,opacity .3s ease .1s;
+        transition: transform .3s ease .2s,opacity .3s ease .1s,-webkit-transform .3s ease .2s;
+    }
+
+
+    .nav__middle-dropdown{
+        position: absolute;
+        z-index: 3;
+        top: 100%;
+        background-color: #fff;
+        list-style: none;
+        width: 100%;
+        margin: 0 .8rem .8rem 0;
+        box-shadow: 0 0.2rem 0.6rem 0 rgb(0 0 0 / 8%);
+        border: .1rem solid #efefef;
+        cursor: pointer;
+        left: 50%;
+        margin-top: -.8rem;
+        width: auto;
+        min-width: 100%;
+        background-color: #154284;
+        padding: .8rem 0;
+        border: none;
+        box-shadow: 0 0.4rem 0.9rem 0 rgb(0 0 0 / 20%);
+        visibility: visible;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transform-origin: top center;
+        transform-origin: top center;
+        transition: opacity .1s ease,-webkit-transform .2s ease;
+        transition: transform .2s ease,opacity .1s ease;
+        transition: transform .2s ease,opacity .1s ease,-webkit-transform .2s ease;
+        -webkit-transform: translateX(-50%) scale(0);
+        transform: translateX(-50%) scale(0);
+    }
+
+    .nav__middle-item:hover .nav__middle-dropdown{
+        opacity: 1;
+        -webkit-transform: translateX(-50%) scale(1);
+        transform: translateX(-50%) scale(1);
+    }
+
+    .nav__middle-dropdown::after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 0;
+        height: 0;
+        bottom: 100%;
+        right: .2rem;
+        border: .8rem solid #154284;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        -webkit-filter: drop-shadow(0 -.1rem 0 rgba(0,0,0,.08));
+        filter: drop-shadow(0 -.1rem 0 rgba(0,0,0,.08));
+        left: 50%;
+        right: auto;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .nav__middle-dropdown--2{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    
+    .nav__middle-dropdown--2::before{
+        content: "";
+        position: absolute;
+        top: 1.4rem;
+        left: 50%;
+        bottom: 2rem;
+        width: 0.1rem;
+        background: hsla(0,0%,100%,.1);
+    }
+    
+    .nav__middle-dropdown--2 .nav__middle-dropdown-item{
+        min-width: 24rem;
+    }
+    
+    
+    .nav__middle-dropdown--3{
+        min-width: 20rem;
+    }
+    
+    .nav__middle-dropdown--4{
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+    
+    .nav__middle-dropdown--4 .nav__middle-dropdown-item{
+        min-width: 24rem;
+    }
+    
+
+
+    /* =======Mega menu======== */
+    .mega-dropdown {
+        position: absolute;
+        display: flex;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        padding: 3.5rem 2.4rem 4rem;
+        height: auto;
+        background: #0a0927;
+        justify-content: center;
+        cursor: default;
+        visibility: visible;
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transform-origin: top center;
+        transform-origin: top center;
+        transition: opacity .1s ease,-webkit-transform .2s ease;
+        transition: transform .2s ease,opacity .1s ease;
+        transition: transform .2s ease,opacity .1s ease,-webkit-transform .2s ease;
+    }
+
+    .nav__mega-menu{
+        position: static;
+    }
+    
+    .nav__mega-menu:hover .mega-dropdown{
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    
+    .nav__mega-menu:hover .mega-dropdown__column{
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    
+    .mega-dropdown>li, .mega-dropdown__column {
+        opacity: 0;
+        -webkit-transform: translateY(-1rem);
+        transform: translateY(-1rem);
+        transition: opacity .3s ease .1s,-webkit-transform .3s ease .2s;
+        transition: transform .3s ease .2s,opacity .3s ease .1s;
+        transition: transform .3s ease .2s,opacity .3s ease .1s,-webkit-transform .3s ease .2s;
+    }
+
+    /* =============Carousel========= */
+    .carousel--active .carousel-link__title{
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        transition-delay: .1s;
+    }
+
+    .carousel--active .carousel-link__des{
+        opacity: 1;
+        max-height: 10rem;
+        transition: opacity .6s .1s,max-height .6s;
+    }
+
+    /* Barca tv hover pc */
+    .barcatv__item:hover{
+        transform: scale(1.1);
+    }
+    
+    .barcatv__item:hover::before{
+        opacity: 1;
+    }
+
+    .barcatv__item:nth-of-type(2n):hover .barcatv__item-title,
+    .barcatv__item:nth-of-type(2n):hover .barcatv__item-tag,
+    .barcatv__item:nth-of-type(2n):hover .barcatv__item-original {
+        opacity: 0;
+    }
+
+    .barcatv__item:last-child:hover .barcatv__item-title,
+    .barcatv__item:last-child:hover .barcatv__item-tag,
+    .barcatv__item:last-child:hover .barcatv__item-original {
+        opacity: 0;
+    }
+    
+    .barcatv__item:hover .barcatv__item-caption {
+        opacity: 1;
+    }
+
+    .barcatv__item:hover .video-play {
+        background-color: #fdc52c;
+        transition: color .25s,background-color .3s ease .32s;
+    }
+    
+    .barcatv__item:hover .video-play__icon {
+        opacity: 1;
+        transition: opacity .3s ease .32s;
+    }
+    
+    .barcatv__item:hover .video-play:after,
+    .barcatv__item:hover .video-play:before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .barcatv__item:hover .video-play:after {
+        border-bottom-color: #fdc52c;
+        border-left-color: #fdc52c;
+        transition: border-color 0s ease-out .16s,width .08s ease-out .16s,height .08s ease-out .24s;
+    }
+    
+    .barcatv__item:hover .video-play:before {
+        border-top-color: #fdc52c;
+        border-right-color: #fdc52c;
+        transition: width .08s ease-out,height .08s ease-out .08s;
+    }
+
+    .barcatv__subscribe-btn:hover:before {
+        background: #fff;
+    }
+
+    /* Footer sponsor a hover */
+    .footer-sponsors__sponsor a:hover:after {
+        left: 0;
+        right: 0;
+    }
+
+
+}
+
+
+/* Mobile and tablet */
+@media (max-width: 1023px) {
+    /* ==========Header=========== */
+    .header {
+        height: unset;
+    }
+
+    .hide-on-tablet-mobile{
+        display: none;
+    }
+
+    .nav{
+        margin: 0.5rem 0;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .nav__primary{
+        display: flex;
+        flex-flow: row wrap;
+        -webkit-transform: translateX(-110%);
+        transform: translateX(-110%);
+        width: 100vw;
+        height: 100vh;
+        background: #181733;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+            overflow-y: auto;
+       
+    }
+
+    .nav__top{
+        width: 100%;
+        border: unset;
+        background-color:transparent;
+        margin: 0.5rem;
+        justify-content:center;
+    }
+
+    .allsite{
+        display: none;
+    }
+
+    .mobile-search{
+        display: block;
+        width: 90%;
+    }
+
+    .language-switcher__dropdown{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 2rem 0;
+        opacity: 0;
+        -webkit-transform: translateY(-110%);
+        transform: translateY(-110%);
+    }
+
+    .language-switcher__dropdown-heading{
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0rem 3rem;
+    }
+
+    .language-switcher__dropdown-text{
+        margin-bottom: .8rem;
+        margin-left: 1rem;
+    }
+
+    .language-switcher__mobile-close{
+        display: block;
+    }   
+    
+    .language-switcher__item--active:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        content: "";
+        height: 2.4rem;
+        width: 0.8rem;
+        background-color: #154284;
+    }
+
+    .language-switcher__item{
+        border-bottom: 1px solid #ccc;
+    }
+
+    .language-switcher__dropdown::after{
+        display: none;
+    }
+
+    .top__socials{
+        display: none;
+    }
+
+    .nav__logo{
+        min-width: 20rem;
+        display: none;
+        width: 15rem;
+    }
+
+    .nav__logo-link::after{
+        display: none;
+    }
+
+    .nav__logo-link::before{
+        display: none;
+    }
+
+    .language-switcher{
+        border: unset;
+    }
+
+    .header__line{
+        display: none;
+    }
+
+    .nav__middle{
+        flex-direction: column;
+        justify-content: unset;
+        position: relative;
+        height: 20%;
+        border: unset;
+        width: 100%;
+        transform: translateY(-150%);
+    }
+
+    .nav__middle:hover .icon{ 
+        fill: #fff;
+    }
+    
+    .nav__middle:hover .nav__middle-item,
+    .nav__middle:hover .nav__middle-link-shop{
+        color: #fff;
+    
+    }
+    
+    .nav__middle .nav__middle-item:hover,
+    .nav__middle-item:hover .icon{
+        color: #fff;
+        fill: #fff;
+    }
+    
+    .nav__middle-item:hover .nav__middle-link-shop{
+        color: #fff;
+    }
+    
+    .nav__middle-item:hover{
+        background-color: transparent;
+    }
+
+    .nav__middle-dropdown-link{
+        padding: 2rem 3rem;
+        font-size: 1.6rem;
+        border-bottom: 1px solid hsla(0,0%,100%,.1);
+    }
+
+    .nav__middle-item{
+        font-weight: 500;
+        border: unset;
+        padding: 0;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: hsla(0,0%,100%,.6);
+        display: block;
+    }
+
+    .nav__middle-dropdown{
+        position: fixed;
+        height: 100vh;
+        top: -10rem;
+        display: inline-block;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 3rem 0 5rem 0;
+        z-index: 30;
+        opacity: 0;
+        transform: scale(0);
+        background: linear-gradient(180deg,#cd122d 0,#154284);    
+        transition: 0.4s;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        overflow-y: auto;
+    }
+
+    .nav__middle-item .nav__middle-dropdown.close-menu{
+        opacity: 0;
+        transform: scale(0);
+    }
+    
+    .nav__middle-item--active .nav__middle-dropdown-item{
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .nav__middle-link-shop{
+        justify-content: flex-start;
+    }
+
+    .nav__middle-item:hover {
+        background-color: transparent;
+    }
+
+    .nav__middle-item-text{
+        color: #fff;
+        width: 100%;
+        height: 4.8rem;
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+        margin: 0;
+    }
+
+    .nav__middle-item--active .nav__middle-item-text,
+    .nav__middle-item--active.nav__middle-mobile-logo{
+        position: relative;
+        color: #fff;
+        background: linear-gradient(90deg,#2c4481,#181733);
+    }
+
+    .nav__middle-item--active .nav__middle-item-text::before,
+    .nav__middle-item--active.nav__middle-mobile-logo::before{
+        opacity: 1;
+        height: 100%;
+    }
+
+    .nav__middle-item-text::before,
+    .nav__middle-mobile-logo::before{
+        content: "";
+        display: block;
+        position: absolute;
+    }
+
+    .nav__middle-mobile-logo::before,
+    .nav__middle-item-text::before {
+        top: 0;
+        left: 0;
+        width: 0.5rem;
+        background: #fdc52c;
+        transition: top .3s,bottom .3s,opacity .2s;
+        opacity: 1;
+    }
+
+    .nav__middle-item--active .nav__middle-dropdown{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav__middle-dropdown-close{
+        display: inline-block;
+    }
+
+    .nav__middle-icon{
+        display: none;
+    }
+
+    .nav__middle-mobile-logo .icon{
+        fill: #fff;
+    }
+
+    .nav__middle-searchBox{
+        display: none;
+    }
+
+    .nav__mobile-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .user-options__btn{
+        display: flex;
+    }
+
+    .top__right{
+        justify-content: center;
+        width: 95%;
+    }
+
+    .options-user{
+        display: none;
+    }
+
+
+    .user-options{
+        display: block;
+    }
+
+    .user-options__buttons-wrapper {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #181733;
+        z-index: 10;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        transition: transform 0.3s;
+        /* overflow: hidden; */
+    }
+
+    .nav__middle-item{
+        height: 4.8rem;
+    }
+
+    .user-options__button-container {
+        flex: 1;
+    }
+
+    .user-options__button-container--login {
+        flex: 2;
+    }
+
+    .user-options__button {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .user-options__button .icon {
+        margin-right: 0.8rem;
+    }
+
+    .user-options__button-container--register {
+        flex: 3;
+        background-image: linear-gradient(90deg,#8c1a17,#cd122d);
+    }
+
+    .user-options__button-container--register .user-options__button {
+        background-image: none;
+    }
+
+    .user-options__button-container--register .user-options__button {
+        background: linear-gradient(90deg,#8c1a17,#cd122d);
+    }
+
+    .user-options__mobile-close {
+        display: flex;
+        align-items: center;
+        border-radius: 3px;
+        margin-left: auto;
+        padding: 1rem;
+    }
+
+    .user-options__mobile-close .icon {
+        fill: #fff;
+    }
+
+    .mobile-close-btn{
+        display: block;
+    }
+
+    .nav__middle-item:hover .nav__middle-link-shop{
+        color: hsla(0,0%,100%,.6);
+    }
+
+    /* .nav__middle-item:hover{
+        background-color: transparent;
+    } */
+
+    .nav__middle .nav__middle-item:hover,
+    .nav__middle-item:hover .icon{
+        color: hsla(0,0%,100%,.6);
+        fill: hsla(0,0%,100%,.6);
+    }
+
+    .nav__mega-menu{
+        position: relative;
+    }
+
+    .nav__search{
+        display: none;
+    }
+
+    .mega-dropdown{
+        position: fixed;
+        top: -10rem;
+        display: inline-block;
+        width: 100%;
+        height:100vh;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        padding-top: 3rem;
+        z-index: 30;
+        background: linear-gradient(180deg,#cd122d 0,#154284);    
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.4s;
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        overflow-y: auto;
+    }
+
+    .nav__middle-item .mega-dropdown.close-menu{
+        opacity: 0;
+        transform: scale(0);
+
+    }
+    
+    .nav__middle-item--active .mega-dropdown{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .mega-dropdown__column--title:first-child{
+        margin: 0 0 3rem 8rem;
+    }
+
+    .mega-dropdown__list-item--title{
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .mega-dropdown__list{
+        padding-left: 0;
+    }
+
+    .mega-dropdown__list-link{
+        padding: 2rem 3rem;
+        font-size: 1.6rem;
+        border-bottom: 1px solid hsla(0,0%,100%,0.1);
+        font-weight: unset;
+    }
+
+    .quick-nav{
+        display: flex;
+    }
+
+    /* ============container ==============*/
+    .container {
+        margin-top: 9rem;
+    }
+    
+    .wrapper {
+        padding: 0;
+    }
+  
+    .carousel{
+        flex-wrap: wrap;
+    }
+
+    .carousel-link{
+        width: 50%;
+        flex: 1 0 50%;
+        height: 50%;
+    }
+    
+    .carousel-link__img{
+        height: 80%;
+    }
+
+    .carousel-link:first-child{
+        width: 100%;
+        flex: 1 0 100%;
+
+    }
+
+    .carousel-link__title{
+        width: unset;
+        max-width: 60rem;
+        font-size: 2.2rem;
+    }
+
+    .carousel-link:focus .carousel-link__title {
+        color: #fdc52c;
+    }
+
+    .carousel-link__des {
+        display: none;
+    }
+
+    .carousel-link__gradient {
+        top: -1px;
+        background: linear-gradient(180deg,rgba(8,14,31,0),#080e1f 80%,#080e1f);
+    }
+
+    .countdown{
+        padding: 0;
+    }
+
+    .newspaper__img {
+        height: 24rem;
+    }
+
+    /* =======Schedule====== */
+    .calendar{
+        display: none;
+    }
+
+    .scroller-controls{
+        display: none;
+    }
+
+    .matches-list{
+        overflow-x: scroll;
+        justify-content:center;
+    }
+
+    .matches-item{
+        min-width: 28.8rem;
+    }
+
+    .matches-item--large {
+        min-width: 32rem;
+    }
+
+    .matches-item__link-match{
+        padding: 1rem 1.3rem 0.5rem;
+        max-height: 16.4rem;
+        
+    }
+
+    .matches-item--large .matches-item__match-result{
+        margin: 0;
+    }
+
+    .match-result__kickoff-time{
+        font-size: 3.2rem;
+    }
+
+    .match-result__time{
+        padding: 0;
+    }
+    
+
+    .team-names__text{
+        font-size: 1.3rem;
+    }
+
+    .matches-item__link-cta{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .matches-item__link-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 13.4rem;
+        min-width:auto;
+        width: 50%;
+        line-height: 1;
+        font-size: 1.2rem;
+        padding: 0.4rem 1.6rem;
+        height: 3.2rem;
+    }
+
+    .matches-item--large .matches-item__match-team .icon{
+        width: 6.5rem;
+        height: 6.5rem;
+    }
+
+    .store-item__infor {
+        padding: 1rem;
+    }
+
+    .featured-promo__description {
+        font-size: 1.4rem;
+    }
+
+    .newspaper{
+        padding: 0;
+    }
+
+    .newspaper__item {
+        width: 47%;
+        margin: 1rem;
+        height: unset;
+    }
+
+    .newspaper__item:hover .newspaper__content-text-des {
+        opacity: 0;
+        height: 0;
+    }
+
+    .newspaper .widget__title {
+        padding-top: 2rem;
+    }
+
+    .barcatv__list {
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .barcatv__item {
+        height: 32rem;
+        width: 22rem;
+        margin: 0 1rem;
+    }
+
+    .barcatv__item-img {
+        width: unset;
+    }
+
+    .social-accounts__account-container {
+        max-width: none;
+        flex: 0 1 30%;
+    }
+
+    /* ==========Footer============ */
+    .footer__sitemap {
+        margin: 0;
+    }
+
+    .footer-nav {
+        margin-top: 1.6rem;
+        display: grid;
+        padding: 1.6rem;
+        grid-gap: 1.6rem;
+        grid-template-columns: repeat(4,calc(25% - 1.6rem));
+    }
+
+    .footer-sitemap__nav-list {
+        margin-top: 1.6rem;
+    }
+
+    .footer-sitemap__nav-link {
+        line-height: 2.4rem;
+    }
+
+    .footer-sitemap__nav-title {
+        margin: 0;
+    }
+
+    .footer-corporate-links__bottom-container {
+        flex-direction: column;
+    }
+
+    .footer-corporate-links__copyright {
+        font-size: 1rem;
+        line-height: 1.2rem;
+        padding-left: 0.8rem;
+    }
+
+    .footer-corporate-links__group {
+        margin-top: 1.2rem;
+        flex-direction: column;
+    }
+
+    .footer-corporate-links__item {
+        padding: 0.4rem;
+    }
+
+    .footer-corporate-links__item:after {
+        display: none;
+    }
+
+    .footer-corporate-links__bottom-container {
+        align-items: unset;
+    }
+
+    .footer:after {
+        height: 0.8rem;
+        bottom: -0.8rem;
+    }
+
+    
+}
+
+/* tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .gift__item-link {
+        width: 14.3rem;
+        height: 8.4rem;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    }
+
+    .schedule-header__title {
+        font-size: 3rem;
+    }
+
+    .item-infor__content {
+        padding-left: 1.5rem;
+    }
+
+    .item-infor__content-title {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .item-infor__img {
+        width: 8rem;
+        height: 13rem;
+    }
+
+    .featured-promo__bg {
+        height: 34rem;
+    }
+
+    .featured-promo__bg::after{
+        height: 9rem;
+        width: 1.6rem;
+    }
+
+    .featured-promo__bg::before{
+        height: 16rem;
+        width: 1.6rem;
+    }
+
+    .featured-widget__title {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    .footer__title {
+        transform: translateY(3rem);
+    }
+
+    .footer__trophies {
+        height: auto;
+    }
+
+    .trophies__list {
+        flex-wrap: wrap;
+
+    }
+
+    .trophies__item {
+        width: calc(50% - 4.8rem);
+        margin: 2.4rem;
+    }
+
+  
+    
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .carousel-link__title {
+        font-size: 1.8rem;
+        padding: 0 0.8rem;
+    }
+
+    .marketing-partners {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .marketing-partners__title {
+        flex: 1 0 100%;
+        text-align: center;
+        line-height: unset;
+        padding-right: 0;
+        margin: 0.8rem;
+        border: none;
+    }
+
+    .marketing-partners__logo-link {
+        display: flex;
+        justify-content: center;
+        flex: 1 0 33.3333%;
+        margin-bottom: 1rem;
+    }
+
+    .marketing-partners__logo {
+        margin-left: 0;
+    }
+
+    .gift__heading{
+        font-size: 2.4rem;
+    }
+
+    .gift__list {
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+
+    .gift__item-link {
+        width: 17.2rem;
+        height: 10rem;
+    }
+
+    .gift__item:hover{
+        transform: scale(1);
+    }
+
+    /* =========Schedule========= */
+    .schedule{
+        padding: 3.4rem 1.4rem 2.4rem;
+    }
+
+    .schedule-header{
+        flex-direction: column;
+    }
+
+    .schedule-header__title{
+        margin-right: 0;
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .countdown__clock{
+        font-size: 2.8rem;
+    }
+
+    .matches-list{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        justify-content:flex-start;
+    }
+
+    .store-item {
+        width: 100%;
+    }
+
+    .featured-promo__bg {
+        height: 24rem;
+    }
+
+    .featured-promo__bg::after{
+        height: 7rem;
+        width: 1.2rem;
+    }
+
+    .featured-promo__bg::before{
+        height: 12rem;
+        width: 1.2rem;
+    }
+
+    .featured-widget__title {
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        min-width: 20rem;
+    }
+
+    .newspaper__list {
+        flex-direction: column;
+    }
+
+    .newspaper__item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .newspaper__item:hover {
+        box-shadow: unset;
+    }
+
+    .newspaper__item:hover .newspaper__item-img {
+        transform: unset;
+    }
+
+    .newspaper__img {
+        max-width: 30%;
+        height: 9.3rem;
+        margin-right: 2rem;
+    }
+
+    .newspaper__content-text-title {
+        margin: 0;
+        min-height: unset;
+        text-align: left;
+    }
+
+    .newspaper__content-meta {
+        margin-bottom: 0;
+        justify-content: flex-start;
+    }
+
+    .newspaper__content-meta-left {
+        margin-right: 1rem;
+    }
+
+    .barcatv__subscribe {
+        flex-direction: column;
+        
+    }
+
+    .barcatv__subscribe-text {
+        text-align: center;
+
+    }
+
+    .footer__trophies {
+        margin: 0;
+        border: none;
+    }
+
+    .trophies__list {
+        flex-wrap: nowrap;
+
+    }
+
+    .trophies__item {
+        width: calc(25% - .8rem);
+        height: 16.8rem;
+        margin: .4rem;
+        border-radius: .3rem;
+    }
+
+    .trophies__item-background-pattern {
+        background-image: url('https://www.fcbarcelona.com/resources/v2.37.1-4373/i/bg-elements/horizontal-flash-mobile.jpg');
+    }
+
+    .trophies__item-background-text {
+        top: 1.4rem;
+        height: 3.6rem;
+    }
+
+    .trophies__item-competition {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .trophies-competition__name {
+        font-size: .9rem;
+        height: 2.4rem;
+        padding: .4rem .8rem;
+        width: 100%;
+        margin: 0;
+        line-height: 1rem;
+        text-align: center;
+    }
+
+    .trophies-competition__cup {
+        height: 4.4rem;
+        width: 3.344rem;
+    }
+
+    .trophies-competition__count {
+        font-size: 3.8rem;
+        line-height: 4.6rem;
+        text-align: center;
+    }
+
+    .trophies-competition__type {
+        font-size: .8rem;
+        line-height: .9rem;
+        text-align: center;
+    }
+
+    .more-barca .newspaper__list{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .more-barca .newspaper__item{
+        width: 47%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0.5rem;
+    }
+
+    .more-barca .newspaper__img {
+        max-width: unset;
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+
+    }
+    
+
+    .more-barca .newspaper__item-img {
+        width: 100%;
+        height: unset;
+        margin-right: unset;
+    }
+
+    .more-barca .newspaper__content-meta {
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+    }
+
+    .more-barca .newspaper__content-text-title {
+        margin: 0;
+        min-height: 4.6rem;
+        text-align: center;
+      
+    }
+
+
+
+    .footer__constitutional-pattern {
+        height: 16rem;
+        width: 420%;
+        left: -160%;
+    }
+
+    .footer__title {
+        font-size: 3.2rem;
+        padding: 5rem 0;
+    }
+
+    .footer__sponsors {
+        position: relative;
+        margin-top: 2.8rem;
+    }
+
+    .footer__sponsors:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -0.8rem;
+        left: -100vw;
+        width: 200vw;
+        height: 2.4rem;
+        z-index: 10;
+        background: linear-gradient(180deg,rgba(24,23,51,0),#181733);
+    }
+
+    .footer-sponsors__container {
+        flex-direction: column;
+    }
+
+    .footer-sponsors__main {
+        min-height: 14rem;
+    }
+
+
+    .footer-sponsors__title {
+        width: 100%;
+        text-align: center;
+        line-height: .2rem;
+        height: auto;
+    }
+
+    .footer-sponsors__title span {
+        padding: 0 0.8rem;
+        position: relative;
+    }
+
+    .footer-sponsors__title span:after, .footer-sponsors__title span:before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        background: #fdc52c;
+        width: calc(50vw - 50% - 3.2rem);
+        height: 0.2rem;
+    }
+
+
+    .footer-sponsors__title span:before {
+        left: calc(-50vw + 50% + 1.6rem);
+    }
+
+    .footer-sponsors__title span:after {
+        right: calc(-50vw + 50% + 1.6rem);
+    }
+
+    .footer-sponsors__sponsor--nike {
+        width: 16%;
+    }
+    
+    .footer-sponsors__sponsor--rakuten {
+        width: 19%;
+    }
+    
+    .footer-sponsors__sponsor--beko {
+        width: 13%;
+    }   
+    
+
+    .footer-sponsors__sponsors-container {
+        margin: 0;
+        padding: 2.4rem 0;
+    }
+
+    .footer-sponsors .footer-sponsors__sponsor {
+        height: unset;
+    }
+
+    .footer-sponsors__sponsors-container:before {
+        display: none;
+    }
+
+    .footer-sponsors__link-wrapper {
+        bottom: -2.4rem;
+        top: auto;
+        left: 50%;
+        width: calc(100% - 3.2rem);
+        text-align: center;
+        margin: 0 auto;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .footer-sponsors__link {
+        display: block;
+        width: 100%;
+    }
+
+    .social-accounts__title {
+        margin:0 ;
+    }
+
+    .footer-nav {
+        grid-template-columns: repeat(2,calc(50% - 1.6rem));
+    }
+
+    .newspaper__content-meta-left,
+    .newspaper__content-meta-time,
+    .newspaper__content-meta-left::before {
+        margin-right: 0;
+    }
+
+    .more-barca .newspaper__content-text-title {
+        font-size: 1.6rem;
+    }
+
+   
+
+
+
+
+
+
+
+}
+
