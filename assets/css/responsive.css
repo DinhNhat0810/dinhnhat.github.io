@@ -1372,9 +1372,6 @@
         grid-template-columns: repeat(2,calc(50% - 1.6rem));
     }
 
-    .newspaper__content-meta-left {
-        margin-left: 0.8rem;
-    }
 
     .more-barca .newspaper__content-meta-left,
     .more-barca .newspaper__content-meta-time,
